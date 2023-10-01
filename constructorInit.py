@@ -1,5 +1,6 @@
 class CcnyDegree(): #curriculum/design to geth the degree from this instituition
     
+    credits_completed = 15
     #assign all the attributes we want to assign to the object/result/product in the parameters of the constructor
     def __init__(self, name, credits = None, courses = None, department = None): #constructor
 
@@ -31,6 +32,8 @@ computer_engineering.students = True
 # returns the result from the method call
 print(computer_engineering.engineering_degree())
 
+print(CcnyDegree.__dict__) #class attribute
+print(computer_engineering.__dict__) #instance attribute
 
 #attributes/properties of the instance
 # computer_engineering.credits = '120'
