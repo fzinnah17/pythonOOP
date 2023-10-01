@@ -1,5 +1,6 @@
 class CcnyDegree(): #curriculum/design to geth the degree from this instituition
     
+    all = []
     credits_completed = 45
     #assign all the attributes we want to assign to the object/result/product in the parameters of the constructor
     def __init__(self, name, credits = None, courses = None, department = None): #constructor
@@ -9,7 +10,7 @@ class CcnyDegree(): #curriculum/design to geth the degree from this instituition
         assert courses > 0, f"Courses {courses} should be more than zero" 
 
         # Assign attributes to self object
-        print(f'The instances are: {name}')
+        #print(f'The instances are: {name}')
         #dynamic attribute assignment
         self.name = name
         self.credits = credits
@@ -18,30 +19,35 @@ class CcnyDegree(): #curriculum/design to geth the degree from this instituition
         #(self, name, credits = None, courses = None, department = None)
         #assigning to None means we don't have to pass in anything to the parameters
 
+        #Append all instances to the all list
+        self.all.append(self)
+
     def engineering_degree(self): #we don't have to pass in separate parameters anymore
         return self.credits * self.courses
     
     def student_finished(self):
         return self.courses * self.credits_completed #using self helps to use any class/instance level attribute
 
+    def __repr__(self):
+        return f"CcnyDegree'{self.name}', {self.credits}, {self.courses}, {self.department})"
 #instance/subpart of the class/design
 computer_engineering = CcnyDegree('Computer Engineering', 120, 26)
 #having constructor also allows us to have separate attribute outside
 computer_engineering.students = True
-print(computer_engineering.student_finished())
+"""print(computer_engineering.student_finished())
+"""
 
-
-
+print(CcnyDegree.all)
 
 #instance/subpart.method/function 
 #               |
 #               |
 # returns the result from the method call
-print(computer_engineering.engineering_degree())
+"""print(computer_engineering.engineering_degree())
 
 print(CcnyDegree.__dict__) #class attribute
 print(computer_engineering.__dict__) #instance attribute
-
+"""
 #attributes/properties of the instance
 # computer_engineering.credits = '120'
 # computer_engineering.courses = ['Calculus', 'Physics', 'Programming', 'Electronics']
