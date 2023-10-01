@@ -10,7 +10,7 @@ course.title = 'Python Basics' #attribute
 course.description = 'Learn the basics of Python' #attribute
 course.tutoring_students(course.date, course.title)
 #each of these attributes are related to one instance/part/subtask of the class
-print(course.tutoring_students(course.date, course.title))
+# print(course.tutoring_students(course.date, course.title))
 """
 print(type(course)) # <class '__main__.TutoringCenter'> HERE I created my own data type
 print(type(course.date))
@@ -40,4 +40,4 @@ daughter.gender = 'Female'
 daughter.salary = 20
 daughter.hours_worked = 40
 daughter.zinnah_children(daughter.salary, daughter.hours_worked)
-print(daughter.zinnah_children(daughter.salary, daughter.hours_worked))
+# print(daughter.zinnah_children(daughter.salary, daughter.hours_worked))
