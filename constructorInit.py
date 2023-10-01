@@ -1,6 +1,6 @@
 class CcnyDegree(): #curriculum/design to geth the degree from this instituition
     
-    credits_completed = 15
+    credits_completed = 45
     #assign all the attributes we want to assign to the object/result/product in the parameters of the constructor
     def __init__(self, name, credits = None, courses = None, department = None): #constructor
 
@@ -20,11 +20,18 @@ class CcnyDegree(): #curriculum/design to geth the degree from this instituition
 
     def engineering_degree(self): #we don't have to pass in separate parameters anymore
         return self.credits * self.courses
+    
+    def student_finished(self):
+        return self.courses * self.credits_completed #using self helps to use any class/instance level attribute
 
 #instance/subpart of the class/design
 computer_engineering = CcnyDegree('Computer Engineering', 120, 26)
 #having constructor also allows us to have separate attribute outside
 computer_engineering.students = True
+print(computer_engineering.student_finished())
+
+
+
 
 #instance/subpart.method/function 
 #               |
