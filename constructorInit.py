@@ -2,6 +2,12 @@ class CcnyDegree(): #curriculum/design to geth the degree from this instituition
     
     #assign all the attributes we want to assign to the object/result/product in the parameters of the constructor
     def __init__(self, name, credits = None, courses = None, department = None): #constructor
+
+        #Run validations
+        assert credits > 0, f"Credits {credits} should be greater than zero"
+        assert courses > 0, f"Courses {courses} should be more than zero" 
+
+        # Assign attributes to self object
         print(f'The instances are: {name}')
         #dynamic attribute assignment
         self.name = name
