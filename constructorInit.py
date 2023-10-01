@@ -11,14 +11,19 @@ class CcnyDegree(): #curriculum/design to geth the degree from this instituition
         #(self, name, credits = None, courses = None, department = None)
         #assigning to None means we don't have to pass in anything to the parameters
 
-    def engineering_degree(self, x, y):
-        pass
+    def engineering_degree(self): #we don't have to pass in separate parameters anymore
+        return self.credits * self.courses
 
 #instance/subpart of the class/design
-computer_engineering = CcnyDegree('Computer Engineering')
+computer_engineering = CcnyDegree('Computer Engineering', 120, 26)
 #having constructor also allows us to have separate attribute outside
 computer_engineering.students = True
 
+#instance/subpart.method/function 
+#               |
+#               |
+# returns the result from the method call
+print(computer_engineering.engineering_degree())
 
 
 #attributes/properties of the instance
